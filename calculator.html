@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Basic Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(182, 179, 179);
+        }
+
+        .container {
+            position: relative;
+            width: 250px;
+            border: 1px solid gray;
+            padding: 10px;
+            margin: 60px auto;
+            contain: content;
+            border-radius: 5px;
+        }
+
+        .form-control {
+            padding: 8px 0 8px 5px;
+            border: 1px solid rgba(204, 202, 202, 0.89);
+            margin: 8px 0 0;
+        }
+
+        .inp {
+            width: 32px;
+            text-align: center;
+        }
+
+        div #btn {
+            cursor: pointer;
+            margin: 16px auto 8px;
+            background-color: green;
+            color: #fff;
+            border: none;
+            padding: 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        div #btn:hover {
+            background-color: #fff;
+            color: green;
+            border: 1px solid green;
+        }
+
+        .circle {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            right: -75px;
+            top: -8px;
+            border-radius: 75px;
+            background-color: green;
+            z-index: -100;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle"></div>
+        <form action="">
+            <legend id="heading">Basic Calculator</legend>
+            <div class="form-control">
+                <label for="x">x</label>
+                <input type="text" name="x" class="inp">
+                <label for="op">op</label>
+                <input type="text" name="op" class="inp">
+                <label for="y">y</label>
+                <input type="text" name="y" class="inp">
+                <span>=</span>
+                <label for="z">z</label>
+                <input type="text" name="z" class="inp" disabled>
+            </div>
+            <div style="width: 100%;text-align: center;">
+                <button type="submit" id="btn">Solve</button>
+            </div>
+
+        </form>
+    </div>
+
+
+    <script>
+        pageTitle = document.getElementById('heading');
+        let userTitle = prompt("Enter your name: ")
+        pageTitle.innerHTML = userTitle;
+    </script>
+</body>
+
+</html>

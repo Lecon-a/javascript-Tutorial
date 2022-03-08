@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Alternation</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .container {
+            width: 500px;
+            height: fit-content;
+            padding: 8px;
+            margin: 5% auto 0;
+            text-align: center;
+        }
+
+        .color_container {
+            border: 1px solid rgb(230, 229, 229);
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+            margin: 0 auto 16px;
+        }
+
+        .button_collection {
+            border: 1px solid rgb(230, 229, 229);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .btn_color {
+            flex: 1;
+            cursor: pointer;
+            color: green;
+        }
+
+        .btn_color:first-child {
+            color: red;
+        }
+
+        .btn_color:last-child {
+            color: blue;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const changeColor = document.querySelectorAll(".btn_color");
+            
+            changeColor.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const color = document.querySelector(".color_container");
+                    color.style.backgroundColor = btn.innerHTML.toLowerCase();
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="color_container"></div>
+        <div class="button_collection">
+            <div class="btn_color">Red</div>
+            <div class="btn_color">Green</div>
+            <div class="btn_color">Blue</div>
+        </div>
+    </div>
+</body>
+</html>

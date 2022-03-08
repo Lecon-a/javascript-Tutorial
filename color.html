@@ -52,16 +52,16 @@
 
             const color = document.querySelector(".color_container");
             const changeColor = document.querySelectorAll(".btn_color");
-    
+            const selectColor = document.querySelector(".selectColor");
+
             changeColor.forEach(btn => {
                 btn.addEventListener("click", () => {
                     color.style.backgroundColor = btn.innerHTML.toLowerCase();
                 });
             });
 
-            document.querySelector("select").onchange = () => {
-                //color.style.backgroundColor = this.value;
-                alert(this.value)
+            selectColor.onchange = () => {
+                color.style.backgroundColor = selectColor.value;
             }
 
         });
@@ -76,7 +76,7 @@
             <div class="btn_color">Blue</div>
         </div>
         <p>You can equally select your favorite color here:</p>
-        <select>
+        <select class="selectColor">
             <option value="red">Red</option>
             <option value="green">Green</option>
             <option value="blue">Blue</option>

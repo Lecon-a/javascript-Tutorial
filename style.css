@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+}
+
+.button {
+    box-sizing: border-box;
+    width: 80px;
+    height: 23px;
+    border: 2px solid grey;
+    background-color: grey;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+#template {
+    text-align: center;
+    width: fit-content;
+    padding: 5%;
+    color: gray;
+    border-radius: 100%;
+    margin: 0 auto 8px;
+    border: 1px solid grey;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10% 0;
+}

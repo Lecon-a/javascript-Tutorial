@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
         counter++;
         display.innerHTML = counter;
         localStorage.setItem("counter", counter);
+
+        return false;
     });
 });
 
